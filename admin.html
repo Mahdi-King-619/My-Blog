@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Admin Panel - Add New Blog Post</h2>
+    <form id="blogForm">
+        <input type="text" id="title" placeholder="Post Title" required>
+        <textarea id="content" placeholder="Post Content" required></textarea>
+        <button type="submit">Publish</button>
+    </form>
+
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js"></script>
+    <script src="firebase.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

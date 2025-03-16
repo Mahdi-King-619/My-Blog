@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahdi's Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Mahdi's Blog</h1>
+        <button id="adminLogin">Admin Login</button>
+    </header>
+
+    <section id="subscribeSection">
+        <h2>Subscribe to Comment</h2>
+        <input type="email" id="userEmail" placeholder="Enter your email">
+        <button id="subscribeBtn">Subscribe</button>
+        <p id="subStatus"></p>
+    </section>
+
+    <section id="blogPosts">
+        <!-- Blog posts will load here -->
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mahdi's Blog</p>
+    </footer>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js"></script>
+    <script src="firebase.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
