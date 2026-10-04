@@ -3,19 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel</title>
+    <meta name="theme-color" content="#fbf8f2">
+    <title>Write a story — Mahdi's Blog</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <h2>Admin Panel - Add New Blog Post</h2>
-    <form id="blogForm">
-        <input type="text" id="title" placeholder="Post Title" required>
-        <textarea id="content" placeholder="Post Content" required></textarea>
-        <button type="submit">Publish</button>
-    </form>
+<body class="admin-page">
+    <header class="admin-header">
+        <a class="brand" href="index.html">
+            <span class="brand-mark" aria-hidden="true">m.</span>
+            <span>Mahdi's Blog</span>
+        </a>
+        <a class="back-link" href="index.html">← Back to the blog</a>
+    </header>
 
-    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js"></script>
+    <main class="admin-main">
+        <div class="admin-intro">
+            <p class="eyebrow">THE WRITING DESK</p>
+            <h1>What's on your mind?</h1>
+            <p>Put your thoughts into words and share them with your readers.</p>
+        </div>
+        <form id="blogForm" class="admin-form">
+            <label for="title">
+                Story title
+                <input type="text" id="title" placeholder="Give your story a title" maxlength="180" required>
+            </label>
+            <label for="content">
+                Your story
+                <textarea id="content" placeholder="Start writing here..." required></textarea>
+            </label>
+            <button class="primary-link" type="submit">Publish story <span aria-hidden="true">↗</span></button>
+            <p id="publishStatus" class="admin-status" role="status" aria-live="polite"></p>
+        </form>
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore-compat.js"></script>
     <script src="firebase.js"></script>
     <script src="admin.js"></script>
 </body>
