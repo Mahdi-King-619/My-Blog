@@ -3,34 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahdi's Blog</title>
+    <meta name="theme-color" content="#fbf8f2">
+    <meta name="description" content="Ideas, notes, and stories from Mahdi.">
+    <title>Mahdi's Blog — Ideas worth sharing</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Mahdi's Blog</h1>
-        <button id="adminLogin">Admin Login</button>
+    <header class="site-header">
+        <a class="brand" href="#home" aria-label="Mahdi's Blog home">
+            <span class="brand-mark" aria-hidden="true">m.</span>
+            <span>Mahdi's Blog</span>
+        </a>
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="#latest">Stories</a>
+            <a href="#subscribeSection">Newsletter</a>
+            <button class="admin-button" id="adminLogin" type="button">Admin login <span aria-hidden="true">↗</span></button>
+        </nav>
     </header>
 
-    <section id="subscribeSection">
-        <h2>Subscribe to Comment</h2>
-        <input type="email" id="userEmail" placeholder="Enter your email">
-        <button id="subscribeBtn">Subscribe</button>
-        <p id="subStatus"></p>
-    </section>
+    <main id="home">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> A little corner of the internet</p>
+                <h1 id="hero-title">Ideas, notes &amp;<br><span>everything in between.</span></h1>
+                <p class="hero-description">A personal collection of thoughts, discoveries, and stories worth sharing. Pull up a chair and stay a while.</p>
+                <a class="primary-link" href="#latest">Explore the stories <span aria-hidden="true">↓</span></a>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+                <div class="art-sun"></div>
+                <div class="art-paper">
+                    <span class="paper-kicker">FIELD NOTES</span>
+                    <span class="paper-rule"></span>
+                    <span class="paper-rule paper-rule-short"></span>
+                    <span class="paper-scribble">✳</span>
+                </div>
+                <span class="art-caption">Made with curiosity <span>✦</span></span>
+            </div>
+            <div class="hero-bottom"><span>EST. 2025</span><span>THOUGHTS IN GOOD COMPANY</span><span>SCROLL TO EXPLORE ↓</span></div>
+        </section>
 
-    <section id="blogPosts">
-        <!-- Blog posts will load here -->
-    </section>
+        <section class="content-layout" id="latest">
+            <div class="posts-column">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">THE JOURNAL</p>
+                        <h2>Fresh from the blog</h2>
+                    </div>
+                    <span class="heading-note">A collection of recent thoughts</span>
+                </div>
+                <section id="blogPosts" class="post-list" aria-label="Blog posts" aria-live="polite">
+                    <p class="feed-message">Gathering the latest stories<span class="loading-dots" aria-hidden="true">...</span></p>
+                </section>
+            </div>
 
-    <footer>
-        <p>&copy; 2025 Mahdi's Blog</p>
+            <aside class="sidebar">
+                <section class="subscribe-card" id="subscribeSection">
+                    <div class="subscribe-icon" aria-hidden="true">✳</div>
+                    <p class="eyebrow">A GOOD NOTE, NOW AND THEN</p>
+                    <h2>Stay in the loop.</h2>
+                    <p>Get a heads-up when a new story lands. No noise, just the good stuff.</p>
+                    <form id="subscribeForm" class="subscribe-form">
+                        <label class="visually-hidden" for="userEmail">Your email address</label>
+                        <input type="email" id="userEmail" placeholder="you@example.com" autocomplete="email" required>
+                        <button class="primary-link" id="subscribeBtn" type="submit">Subscribe <span aria-hidden="true">→</span></button>
+                    </form>
+                    <p class="form-status" id="subStatus" role="status" aria-live="polite"></p>
+                    <span class="privacy-note">Just stories. Unsubscribe whenever.</span>
+                </section>
+                <div class="sidebar-note">
+                    <span class="note-star" aria-hidden="true">✦</span>
+                    <p>“The best stories remind us that the ordinary is anything but.”</p>
+                    <span class="note-attribution">A NOTE TO SELF</span>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">m.</span><span>Mahdi's Blog</span></a>
+        <p>Made thoughtfully, shared openly.</p>
+        <span>&copy; <span id="currentYear">2025</span> Mahdi's Blog</span>
     </footer>
 
-    <!-- Firebase SDKs -->
-    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore-compat.js"></script>
     <script src="firebase.js"></script>
     <script src="script.js"></script>
 </body>
