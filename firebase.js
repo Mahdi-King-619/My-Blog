@@ -1,6 +1,6 @@
 // Firebase Configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCVPNd_aYCdUyVR9uhnX1L9YESSWN_Wi0U",
+    apiKey: "AIzaSyCVPNd_aYCdUyVR9uhnX1l9YESSWN_Wi0U",
     authDomain: "my-blog-c7080.firebaseapp.com",
     projectId: "my-blog-c7080",
     storageBucket: "my-blog-c7080.firebasestorage.app",

@@ -17,6 +17,8 @@ function setStatus(element, message, isError = false) {
 
 function getSignInErrorMessage(error) {
     switch (error && error.code) {
+        case "auth/api-key-not-valid":
+            return "Firebase rejected this project's API key. In Firebase Console, open Project settings → Your apps, copy the Web app config for my-blog-c7080, and update firebase.js. Check that the API key is active and allows Identity Toolkit API.";
         case "auth/invalid-credential":
         case "auth/user-not-found":
         case "auth/wrong-password":
