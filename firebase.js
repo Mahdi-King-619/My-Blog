@@ -1,12 +1,12 @@
 // Firebase Configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyBIh5vRPXV6G_bMIO-xmM5QMMwuWSDkiEs",
-    authDomain: "blog-91afe.firebaseapp.com",
-    projectId: "blog-91afe",
-    storageBucket: "blog-91afe.appspot.com",
-    messagingSenderId: "998518328744",
-    appId: "1:998518328744:web:a4b56031fe72ba3156e19d",
-    measurementId: "G-07K8Z2VMSS"
+    apiKey: "AIzaSyCVPNd_AYCdUyVR9uhnX1L9YESSWN_Wi0U",
+    authDomain: "my-blog-c7080.firebaseapp.com",
+    projectId: "my-blog-c7080",
+    storageBucket: "my-blog-c7080.firebasestorage.app",
+    messagingSenderId: "1051971787441",
+    appId: "1:1051971787441:web:26a17a2e42e09e2162090",
+    measurementId: "G-MCVG1WKV73"
 };
 
 // Initialize Firebase

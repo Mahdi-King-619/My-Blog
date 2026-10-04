@@ -17,23 +17,48 @@
     </header>
 
     <main class="admin-main">
-        <div class="admin-intro">
-            <p class="eyebrow">THE WRITING DESK</p>
-            <h1>What's on your mind?</h1>
-            <p>Put your thoughts into words and share them with your readers.</p>
-        </div>
-        <form id="blogForm" class="admin-form">
-            <label for="title">
-                Story title
-                <input type="text" id="title" placeholder="Give your story a title" maxlength="180" required>
-            </label>
-            <label for="content">
-                Your story
-                <textarea id="content" placeholder="Start writing here..." required></textarea>
-            </label>
-            <button class="primary-link" type="submit">Publish story <span aria-hidden="true">↗</span></button>
-            <p id="publishStatus" class="admin-status" role="status" aria-live="polite"></p>
-        </form>
+        <section id="signInPanel" class="auth-card">
+            <div class="admin-intro">
+                <p class="eyebrow">ADMIN SIGN IN</p>
+                <h1>Welcome back.</h1>
+                <p>Sign in with the administrator account configured in Firebase to publish a story.</p>
+            </div>
+            <form id="signInForm" class="admin-form">
+                <label for="adminEmail">
+                    Email address
+                    <input type="email" id="adminEmail" placeholder="you@example.com" autocomplete="username" required>
+                </label>
+                <label for="adminPassword">
+                    Password
+                    <input type="password" id="adminPassword" placeholder="Your password" autocomplete="current-password" required>
+                </label>
+                <button class="primary-link" type="submit">Sign in <span aria-hidden="true">→</span></button>
+                <p id="signInStatus" class="admin-status" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section id="editorPanel" hidden>
+            <div class="editor-heading">
+                <div class="admin-intro">
+                    <p class="eyebrow">THE WRITING DESK</p>
+                    <h1>What's on your mind?</h1>
+                    <p>Put your thoughts into words and share them with your readers.</p>
+                </div>
+                <button id="signOutButton" class="admin-signout" type="button">Sign out</button>
+            </div>
+            <form id="blogForm" class="admin-form">
+                <label for="title">
+                    Story title
+                    <input type="text" id="title" placeholder="Give your story a title" maxlength="180" required>
+                </label>
+                <label for="content">
+                    Your story
+                    <textarea id="content" placeholder="Start writing here..." required></textarea>
+                </label>
+                <button class="primary-link" type="submit">Publish story <span aria-hidden="true">↗</span></button>
+                <p id="publishStatus" class="admin-status" role="status" aria-live="polite"></p>
+            </form>
+        </section>
     </main>
 
     <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>

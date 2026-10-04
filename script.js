@@ -4,15 +4,7 @@ const subscribeButton = document.getElementById("subscribeBtn");
 const subscribeStatus = document.getElementById("subStatus");
 
 document.getElementById("adminLogin").addEventListener("click", () => {
-    const username = prompt("Enter Admin Username:");
-    const password = prompt("Enter Admin Password:");
-
-    if (username === "S.Mahdi Al Hasan" && password === "Iamaboyandsiu") {
-        alert("Login Successful!");
-        window.location.href = "admin.html";
-    } else if (username !== null && password !== null) {
-        alert("Invalid credentials!");
-    }
+    window.location.href = "admin.html";
 });
 
 subscribeForm.addEventListener("submit", async (event) => {
